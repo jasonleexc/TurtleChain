@@ -1,4 +1,8 @@
 {
+  "type": "module",
+  "scripts": {
+    "example": "node scripts/example.js"
+  },
   "dependencies": {
     "@unique-nft/sdk": "^2.10.0",
     "@unique-nft/sr25519": "^0.0.2"
