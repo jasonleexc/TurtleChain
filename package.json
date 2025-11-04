@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "example": "node scripts/example.js",
-    "dev:api": "node backend/server.js",
+  "dev:api": "npm --prefix backend run start",
     "dev:web": "npm --prefix frontend run dev"
   },
   "dependencies": {
