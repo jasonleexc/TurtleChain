@@ -30,6 +30,3 @@ export function getSdk({ baseUrl = DEFAULT_BASE_URL, mnemonic } = {}) {
 export const defaultSdk = getSdk();
 
 export default defaultSdk;
-
-const balanceQuery = await sdk.balance.get({address: account.address});
-console.log("account's total balance: ", balanceQuery.total);

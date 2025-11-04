@@ -15,7 +15,6 @@ async function main() {
     console.log('Unable to inspect account object:', e.message);
   }
 
-  // Try a safe RPC call if available (non-fatal)
   if (sdk && sdk.api && sdk.api.rpc && sdk.api.rpc.system && typeof sdk.api.rpc.system.chain === 'function') {
     try {
       const chain = await sdk.api.rpc.system.chain();
