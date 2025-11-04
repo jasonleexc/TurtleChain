@@ -2,6 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { getSdk } from '../src/sdk.js';
 
+// we keep a js version until we fully migrate to ts
+
 dotenv.config();
 
 const app = express();
@@ -13,6 +15,7 @@ app.get('/health', (req, res) => {
 
 app.get('/chain', async (req, res) => {
   try {
+    // check whether the sdk's rpc is available, chain method exists 
     const { sdk } = getSdk();
     if (sdk && sdk.api && sdk.api.rpc && sdk.api.rpc.system && typeof sdk.api.rpc.system.chain === 'function') {
       const chain = await sdk.api.rpc.system.chain();

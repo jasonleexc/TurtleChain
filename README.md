@@ -5,7 +5,7 @@
 
 ---
 
-## 📌 Project Overview & Objectives
+## Project Overview & Objectives
 
 ### Problem
 - Conservation data is fragmented across NGOs, governments and researchers  

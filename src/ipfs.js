@@ -1,5 +1,7 @@
 import { create } from 'ipfs-http-client';
 
+// keep this until we completely migrate to ts
+
 let client = null;
 
 export function createIpfsClient(url) {

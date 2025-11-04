@@ -9,6 +9,7 @@ dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 const app = express();
 const PORT = process.env.API_PORT ? Number(process.env.API_PORT) : 4000;
 
+// parse a max of 10mb json body for image uploads
 app.use(express.json({ limit: '10mb' }));
 
 app.get('/health', (_req, res) => {
@@ -17,6 +18,7 @@ app.get('/health', (_req, res) => {
 
 app.get('/chain', async (_req, res) => {
   try {
+    // check whether the sdk's rpc is available, chain method exists 
     const { sdk } = getSdk();
     if (sdk && (sdk as any).rpc && (sdk as any).rpc.system && typeof (sdk as any).rpc.system.chain === 'function') {
       const chain = await (sdk as any).rpc.system.chain();
@@ -29,6 +31,7 @@ app.get('/chain', async (_req, res) => {
   }
 });
 
+// get current blockchain account address
 app.get('/account', (_req, res) => {
   try {
     const { account } = getSdk();
@@ -53,7 +56,7 @@ app.post('/upload', async (req, res) => {
   }
 });
 
-// Scaffolded blockchain action: this endpoint shows how you'd prepare a mint request.
+// Scaffolded blockchain action, edit this accordingly
 app.post('/mint', async (req, res) => {
   try {
     const { metadataCid, name } = req.body;
