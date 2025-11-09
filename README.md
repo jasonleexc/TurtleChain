@@ -1,11 +1,11 @@
 # TurtleChain
 
-# 🐢 Marine-Chain  
+# Marine-Chain  
 &gt; Non-invasive blockchain identity for endangered marine life
 
 ---
 
-## 📌 Project Overview & Objectives
+## Project Overview & Objectives
 
 ### Problem
 - Conservation data is fragmented across NGOs, governments and researchers  
@@ -17,20 +17,20 @@ Create a **global, trust-less, photo-based identity ledger** so every sighting o
 
 ---
 
-## 🏗️ Dependencies & Technologies (edit this accordingly as we go along)
+## Dependencies & Technologies (edit this accordingly as we go along)
 
 | Layer | Tech |
 |-------|------|
-| **Frontend** | React 18, TypeScript, TailwindCSS, Vite |
+| **Frontend** | Next.js, React 18, TypeScript, TailwindCSS, Vite |
 | **Blockchain** | Unique Network (NFTs), Polkadot.js API |
 | **Inter-chain** | Moonbeam / Astar (ERC-20 via atomic swaps) |
-| **Storage** | IPFS (images), on-chain hash for integrity |
+| **Storage** | IPFS (off-line storing of images), on-chain hash for integrity |
 | **Off-chain** | Substrate OCW (biometric hash generation) |
 | **Dev Tools** | Docker, Docker Compose, Node ≥ 18 |
 
 ---
 
-## 🚀 Setup & Usage
+## Setup & Usage
 
 ### 1. Prerequisites
 - Docker & Docker Compose  
