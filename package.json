@@ -2,18 +2,22 @@
   "type": "module",
   "scripts": {
     "example": "node scripts/example.js",
-  "dev:api": "npm --prefix backend run start",
+    "dev:api": "npm --prefix backend run start",
     "dev:web": "npm --prefix frontend run dev"
   },
   "dependencies": {
     "@unique-nft/sdk": "^2.10.0",
     "@unique-nft/sr25519": "^0.0.2",
     "dotenv": "^17.2.3",
-    "ipfs-http-client": "^60.0.1"
+    "ipfs-http-client": "^60.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.5",
-    "@types/node": "^24.10.0"
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2"
   }
 }
