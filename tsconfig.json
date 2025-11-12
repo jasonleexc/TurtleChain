@@ -13,6 +13,12 @@
     "allowJs": true,
     "rootDir": "."
   },
-  "include": ["src/**/*.ts", "backend/**/*.ts", "frontend/**/*.ts", "frontend/**/*.tsx"],
+  "include": [
+    "src/**/*.ts",
+    "backend/**/*.ts",
+    "backend/**/*.tsx",
+    "frontend/**/*.ts",
+    "frontend/**/*.tsx"
+  ],
   "exclude": ["node_modules", "dist"]
 }

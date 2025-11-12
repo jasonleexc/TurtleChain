@@ -1,5 +1,8 @@
 import { UniqueChain } from "@unique-nft/sdk";
 import { Sr25519Account } from "@unique-nft/sr25519";
+import { BLOCKCHAIN_CONFIG } from "../config/blockchain";
+
+// sdk initialiser 
 
 // Default base URL for a local node; change for production
 const DEFAULT_BASE_URL = process.env.UNIQUE_BASE_URL || "http://localhost:3000";
@@ -20,7 +23,10 @@ export function createAccountFromMnemonic(mnemonic = process.env.MNEMONIC) {
  * Create a configured UniqueChain SDK instance and the signer account.
  * @param {{ baseUrl?: string, mnemonic?: string }} [opts]
  */
-export function getSdk({ baseUrl = DEFAULT_BASE_URL, mnemonic } = {}) {
+export function getSdk({
+  baseUrl = BLOCKCHAIN_CONFIG.baseUrl,
+  mnemonic = process.env.MNEMONIC,
+} = {}) {
   const account = createAccountFromMnemonic(mnemonic);
   const sdk = UniqueChain({ baseUrl, account });
   return { sdk, account };
