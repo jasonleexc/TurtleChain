@@ -1,4 +1,10 @@
-// configure blockchain connection settings 
-// connect to Unique Network RPC endpoint using Unique SDK
+// configure blockchain connection settings
 
-import * as UniqueSDK from '@unique-nft/sdk';
+export const BLOCKCHAIN_CONFIG = {
+  // RPC endpoint for Unique Network (Opal testnet)
+  baseUrl: process.env.UNIQUE_BASE_URL || "https://rest.unique.network/opal/v1",
+
+  // Future extension: add networkId, timeout, retries, etc.
+  networkId: "unique-opal",
+};
+
